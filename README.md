@@ -42,6 +42,7 @@ O `desapega` é um espaço para doação de itens. Os usuários podem criar anú
 - Fazer o protótipo visual
 - Fazer o setup do front-end
 - Fazer o setup do back-end
+- Fazer o setup do banco
 - Criar feature de login [1]
 - Criar tela de login [1]
 
