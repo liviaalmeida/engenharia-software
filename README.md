@@ -26,3 +26,22 @@ O `desapega` é um espaço para doação de itens. Os usuários podem criar anú
 - Cadastro e gerenciamento de anúncios
 - Visualização de anúncios
 - Troca de mensagens entre os usuários
+
+## Histórias de usuário
+
+1. **Login**: como usuário, quero logar no sistema para ter acesso aos serviços do sistema
+2. **Anunciar**: como usuário, quero criar anúncios e gerenciá-los
+3. **Utilizar**: como usuário, quero visualizar os anúncios e poder buscar por palavras neles
+4. **Enviar mensagens**: como usuário, quero enviar mensagens para os anunciantes para combinar a entrega
+5. **Receber mensagens**: como usuário, quero receber mensagens sobre meus anúncios para combinar a entrega
+
+## Sprints
+
+### Sprint 1
+
+- Fazer o protótipo visual
+- Fazer o setup do front-end
+- Fazer o setup do back-end
+- Criar feature de login [1]
+- Criar tela de login [1]
+
