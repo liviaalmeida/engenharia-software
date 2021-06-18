@@ -39,7 +39,7 @@ O `desapega` é um espaço para doação de itens. Os usuários podem criar anú
 
 ### Sprint 1
 
-- Fazer o protótipo visual
+- Fazer o [protótipo visual](https://www.figma.com/file/yOqiU6GKNS5PKQBb0p6eOD/desapega?node-id=0%3A1)
 - Fazer o setup do front-end
 - Fazer o setup do back-end
 - Fazer o setup do banco
