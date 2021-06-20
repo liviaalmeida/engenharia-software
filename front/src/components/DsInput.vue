@@ -31,20 +31,12 @@ export default Vue.extend({
       required: false,
       type: Boolean,
     },
-    icon: {
-      required: false,
-      type: String,
-    },
     'input-attrs': {
       required: false,
       type: Object,
     },
     label: {
       required: true,
-      type: String,
-    },
-    mask: {
-      required: false,
       type: String,
     },
     name: {

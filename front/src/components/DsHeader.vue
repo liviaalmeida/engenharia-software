@@ -31,7 +31,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 100px;
+  height: 90px;
   padding: 0px 20px 20px;
 
   a {
