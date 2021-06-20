@@ -40,6 +40,7 @@ export default Vue.extend({
   justify-content: center;
   margin: 0 auto;
   padding: 0 20px;
+  transform: translateY(-30px);
 
   &-form {
     display: flex;

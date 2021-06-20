@@ -1,5 +1,5 @@
 <template>
   <div class="ads">
-    <h1>This is an ads page</h1>
+    <h2>seus anúncios</h2>
   </div>
 </template>

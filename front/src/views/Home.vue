@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    Home
+    <h2>doe. encontre. troque. ajude o planeta!</h2>
   </div>
 </template>
 
