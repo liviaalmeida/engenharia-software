@@ -13,17 +13,17 @@ const routes: Array<RouteConfig> = [
   {
     path: '/item/:id',
     name: 'Item',
-    component: () => import(/* webpackChunkName: "itens" */ '../views/Item.vue')
+    component: () => import(/* webpackChunkName: "item" */ '../views/Item.vue')
   },
   {
     path: '/anuncios',
     name: 'Ads',
-    component: () => import(/* webpackChunkName: "itens" */ '../views/Ads.vue')
+    component: () => import(/* webpackChunkName: "ads" */ '../views/Ads.vue')
   },
   {
     path: '/anuncio/?:id',
     name: 'Ad',
-    component: () => import(/* webpackChunkName: "itens" */ '../views/Ad.vue')
+    component: () => import(/* webpackChunkName: "ad" */ '../views/Ad.vue')
   },
   {
     path: '/quem-somos',
@@ -31,9 +31,9 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/profile',
+    path: '/perfil',
     name: 'Profile',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "profile" */ '../views/Profile.vue')
   },
 ]
 
