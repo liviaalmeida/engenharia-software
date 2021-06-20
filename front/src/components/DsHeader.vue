@@ -32,6 +32,7 @@
   align-items: flex-end;
   justify-content: space-between;
   height: 90px;
+  margin-bottom: 30px;
   padding: 0px 20px 20px;
 
   a {
