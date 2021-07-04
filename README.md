@@ -41,7 +41,7 @@ O `desapega` é um espaço para doação de itens. Os usuários podem criar anú
 
 - (Lívia) Fazer o [protótipo visual](https://www.figma.com/file/yOqiU6GKNS5PKQBb0p6eOD/desapega?node-id=0%3A1)
 - (Lívia) Fazer o setup do front-end
-- Fazer o setup do back-end
+- (Thiago) Fazer o setup do back-end
 - (Luiz Henrique) Fazer o setup do banco
 - Criar feature de login [1]
 - (Lívia) Criar tela de login [1]
