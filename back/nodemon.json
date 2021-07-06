@@ -2,7 +2,7 @@
     "env" : {
         "MYSQL_USER" : "user_admin",
        "MYSQL_PASSWORD" : "useradminaws1204",
-        "MYSQL_DATABASE" : "BD_Desapega",
+        "MYSQL_DATABASE" : "desapega_BD",
         "MYSQL_HOST" : "database-2.c2ngsjdm863a.us-east-2.rds.amazonaws.com"
         ,
         "MYSQL_PORT" : 3306
