@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <DsLoader v-if="loading" />
     <DsHeader />
     <router-view class="view" />
   </div>
@@ -7,11 +8,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapGetters } from 'vuex'
 import DsHeader from '@/components/DsHeader.vue'
+import DsLoader from '@/components/DsLoader.vue'
 
 export default Vue.extend({
   components: {
     DsHeader,
+    DsLoader,
+  },
+  computed: {
+    ...mapGetters({
+      loading: 'loading',
+    })
   },
 })
 </script>
