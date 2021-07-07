@@ -8,7 +8,7 @@
       v-model="user.email" required />
       <DsInput label="Senha" type="password"
       placeholder="Digite a senha"
-      :input-attrs="{ minLength: 8 }"
+      :input-attrs="{ minLength: 6 }"
       v-model="user.password" required />
       <DsButton>
         {{ button }}
@@ -18,6 +18,10 @@
     @click="registeredUser = !registeredUser">
       {{ action }}
     </button>
+    <DsModal v-model="alert.show"
+    :title="alert.title"
+    :text="alert.text"
+    :type="alert.type" />
   </div>
 </template>
 
@@ -27,6 +31,12 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
+      alert: {
+        show: false,
+        title: '',
+        text: '',
+        type: 'error',
+      },
       user: {
         email: '',
         password: '',
@@ -37,23 +47,55 @@ export default Vue.extend({
   computed: {
     action(): string {
       return this.registeredUser ?
-        'Não tem conta? Clique aqui para fazer cadastro' :
+        'Não tem conta? Clique aqui para se cadastrar' :
         'Já tem conta? Clique aqui para fazer login'
     },
     button(): string {
       return this.registeredUser ?
         'Login' :
-        'Signup'
+        'Cadastrar'
+    },
+    redirect(): string {
+      return this.$route.query?.redirect as string || '/'
     },
   },
   methods: {
     async onLogin() {
-      const response = await this.$api.post('/login', this.user)
-      console.log(response)
+      this.$store.dispatch('startLoading')
+      const { token } = await this.$api.post('/login', this.user)
+      this.$store.dispatch('stopLoading')
+      if (!token) {
+        this.alert = {
+          show: true,
+          title: 'Erro',
+          text: 'Erro ao fazer login',
+          type: 'error',
+        }
+        return
+      }
+      this.$store.dispatch('login', token)
+      this.$router.push(this.redirect)
     },
     async onRegister() {
-      const response = await this.$api.post('/login/register', this.user)
-      console.log(response)
+      this.$store.dispatch('startLoading')
+      const { user } = await this.$api.post('/login/register', this.user)
+      this.$store.dispatch('stopLoading')
+      if (!user) {
+        this.alert = {
+          show: true,
+          title: 'Erro',
+          text: 'Erro ao cadastrar usuário',
+          type: 'error',
+        }
+        return
+      }
+     this.alert = {
+        show: true,
+        title: 'Sucesso',
+        text: 'Usuário cadastrado com sucesso!',
+        type: 'success',
+      }
+      this.registeredUser = true
     },
     async onSubmit() {
       if (this.registeredUser) {
@@ -74,7 +116,6 @@ export default Vue.extend({
   justify-content: center;
   margin: 0 auto;
   padding: 0 20px;
-  transform: translateY(-30px);
 
   &-form {
     display: flex;
@@ -90,6 +131,7 @@ export default Vue.extend({
     border: none;
     cursor: pointer;
     font-family: 'Roboto';
+    font-size: 14px;
     margin-top: 20px;
   }
 }
