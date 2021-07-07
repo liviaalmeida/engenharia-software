@@ -8,18 +8,22 @@ export default class API {
 		return `${API.base}${endpoint}`
 	}
 
-	async get(endpoint: string): Promise<Response> {
-		return await fetch(API.url(endpoint), {
+	// eslint-disable-next-line
+	async get(endpoint: string): Promise<any> {
+		const response = await fetch(API.url(endpoint), {
 			method: 'GET',
 			headers: API.headers,
 		})
+		return await response.json()
 	}
 
-	async post(endpoint: string, body: unknown): Promise<Response> {
-		return await fetch(API.url(endpoint), {
+	// eslint-disable-next-line
+	async post(endpoint: string, body: unknown): Promise<any> {
+		const response = await fetch(API.url(endpoint), {
 			method: 'POST',
 			headers: API.headers,
 			body: JSON.stringify(body),
 		})
+		return await response.json()
 	}
 }
