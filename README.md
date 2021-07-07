@@ -20,6 +20,10 @@ O `desapega` é um espaço para doação de itens. Os usuários podem criar anú
 - Back-end: [Express](https://expressjs.com/)
 - Banco de dados: [MySQL](https://www.mysql.com/)
 
+## Arquitetura
+
+![Desapega Arquitetura](./diagram.png)
+
 ## Features
 
 - Login de usuário
@@ -45,4 +49,3 @@ O `desapega` é um espaço para doação de itens. Os usuários podem criar anú
 - (Luiz Henrique) Fazer o setup do banco
 - (Mariana) Criar feature de login [1]
 - (Lívia) Criar tela de login [1]
-
